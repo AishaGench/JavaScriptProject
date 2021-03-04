@@ -15,8 +15,6 @@ for(i = 0; i < drums.length; i++){
         new Audio(`sounds/${button}.mp3`).play();
     })
 }
-
-
 document.addEventListener("keypress",function(event){
        let result = event.key
        new Audio(`sounds/tom-${result}.mp3`).play();
