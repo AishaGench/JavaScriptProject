@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Organize A Library</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Organize A Library</h1>
+  <form class="mediaForm">
+    <div class="form-group">
+      <label for="mediaTypeSelect">Media Type</label>
+      <select class="form-control" id="mediaTypeSelect">
+        <option value="Book">Book</option>
+        <option value="Movie" >Movie</option>
+        <option value="CD" >CD</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="titleOfMedia">Enter Title of Media</label>
+      <input id="titleOfMedia" class="form-control" type="text" name="title" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="typeOfMedia">Enter Type of Media</label>
+      <input id="typeOfMedia" class="form-control" type="text" name="type" placeholder="Type">
+    </div>
+    <div class="form-group">
+      <label for="creatorOfMedia">Enter Creator of Media</label>
+      <input id="creatorOfMedia" class="form-control" type="text" name="creator" placeholder="Artist/Author name">
+    </div>
+    <div class="form-group">
+      <label for="durationOfMedia">Enter Duration of Media (page number for books)</label>
+      <input id="durationOfMedia" class="form-control" type="text" name="duration" placeholder="Duration">
+    </div>
+    <div class="form-group d-flex">
+      <label for="ratingsOfMedia">Enter Ratings</label>
+      <input class="form-control ratingsOfMedia" type="text" name="rating1">
+      <input class="form-control ratingsOfMedia" type="text" name="rating2">
+      <input class="form-control ratingsOfMedia" type="text" name="rating3">
+      <input class="form-control ratingsOfMedia" type="text" name="rating4">
+    </div>
+  </form>
+  <button type="button" id="submit_btn" class="btn btn-primary mb-2">Add Media</button>
+  <p class="catalogLibrary" id="catalogLibrary" rows="3"></p>
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
