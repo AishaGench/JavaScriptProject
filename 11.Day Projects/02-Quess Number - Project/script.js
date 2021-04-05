@@ -1,53 +1,58 @@
 let secretNumber = Math.floor(Math.random()* 25 +1);
 let checkButton =document.getElementById('button_id');
-let guess= document.querySelector('guess');
-let message = document.querySelector('.message');
-let againButton = document.querySelector('.again');
+let guess= document.querySelector('.guess');
 let classNum = document.querySelector('.number');
+
+let againButton = document.querySelector('.again');
+
+let score = document.querySelector('.score');
+let message = document.querySelector('.message');
+
+let point = 10;
 let highScore = document.querySelector('.highscore');
 let highPoint =0;
-let score = document.querySelector('.score');
-let point = 10;
 
-// console.log(secretNumber);
-// console.log(guess);
+
 
 checkButton.onclick = () => { 
     
     var guess = document.querySelector('.guess').value;
     var classNum = document.querySelector('.number');
 
-    if(guess < 50 || guess > 1){
+    if(point > 1){
 
-if(point >1){
+     if(guess <= 50 && guess >= 1){
 
-    if(guess < secretNumber){
+        if(guess < secretNumber){
         point--
         score.innerHTML = point;
         message.innerHTML = "it is low"
-    }else if(guess > secretNumber){
+
+       }else if(guess > secretNumber){
         point--
         score.innerHTML = point;
         message.innerHTML = "it is high"
-    }else{
+
+       }else{
         classNum.innerHTML = secretNumber;
         classNum.style.fontSize = "20px";
-        document.body.style.backgroundColor = "orange";
-        message.innerHTML = "you are a winner!";
+        document.body.style.backgroundColor = "coral";
+        message.innerHTML = "You are a WINNER!!!";
         checkButton.disabled =true;
-    if(point > highPoint){
-    highPoint === point;
-    highScore.innerHTML = highPoint;
-    }
-    }
+        if(point > highPoint){
+         highPoint = point;
+         highScore.innerHTML = highPoint;
+        }
+       }
 
     } else{
         alert('enter a valid number')
     }
-}else{
+
+  }else{
     point--
     score.innerHTML = point;
-    message.innerHTML = "You are loser";
+    message.innerHTML = "You are LOSER :(";
     document.body.style.backgroundColor = 'red';
     checkButton.disabled = true;
 }
